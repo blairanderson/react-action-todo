@@ -1,13 +1,13 @@
 import React from "react";
 import log from "./log";
-import HTML5Backend from "react-dnd-html5-backend";
-import faker from "faker/locale/en";
-import { Box, Button } from "@material-ui/core";
-import axios from "axios";
-import { Flipper } from "react-flip-toolkit";
-import update from "immutability-helper";
-import { DndProvider } from "react-dnd";
 import Item from "./Item";
+import { Box, Button } from "@material-ui/core";
+import { Flipper } from "react-flip-toolkit";
+import axios from "axios";
+import Faker from "faker/locale/en";
+import update from "immutability-helper";
+import HTML5Backend from "react-dnd-html5-backend";
+import { DndProvider } from "react-dnd";
 import Sortly, {
   ContextProvider,
   add,
@@ -27,7 +27,7 @@ const debounce = (fn, delay) => {
   };
 };
 
-function NotionList({ defaultItems, listType, maxDepth, apiGet, apiPost }) {
+function TodoList({ defaultItems, listType, maxDepth, apiGet, apiPost }) {
   let FIRST_LOAD = 0;
   const [items, setItems] = React.useState(defaultItems);
   const [loading, setLoading] = React.useState(false);
@@ -319,7 +319,7 @@ function NotionList({ defaultItems, listType, maxDepth, apiGet, apiPost }) {
 const AppContainer = props => (
   <DndProvider backend={HTML5Backend}>
     <ContextProvider>
-      <NotionList {...props} />
+      <TodoList {...props} />
     </ContextProvider>
   </DndProvider>
 );

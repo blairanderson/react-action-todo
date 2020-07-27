@@ -1,6 +1,6 @@
 # React Action TODO
 
-creating a notion-medium-like editing todo list that has some helpful activity to it.
+Creating a notion-medium-like editing todo list that has some helpful activity to it.
 
 This is not compatible with NOTION API, but i am open to pull requests.
 
